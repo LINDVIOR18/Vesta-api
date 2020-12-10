@@ -39,7 +39,7 @@ after_success:
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
 
    #VESTA-API
-  - export VESTA_API=vadimeladii7/vesta-api
+  - export VESTA_API=lindvior2/pad-lab
   - docker build -t $VESTA_API:$COMMIT ./
   - docker tag $VESTA_API:$COMMIT $VESTA_API:$TAG
   - docker push $VESTA_API
